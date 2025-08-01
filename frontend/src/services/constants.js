@@ -1,11 +1,13 @@
 export const API_ENDPOINTS = {
-  TODOS: '/todos',
-  SUBTASKS: (todoId) => `/todos/${todoId}/subtasks`,
-  GENERATE_SUBTASKS: (todoId) => `/todos/${todoId}/generate`,
-  TRANSLATE_TODO: (todoId) => `/todos/${todoId}/translate`,
-  TRANSLATE_TEXT: '/todos/translate',
-  TOGGLE_TODO: (todoId) => `/todos/${todoId}/toggle`,
-  UPDATE_SUBTASK: (subtaskId) => `/subtasks/${subtaskId}`,
+  TODOS: '/api/v1/todos',
+  SUBTASKS: (todoId) => `/api/v1/todos/${todoId}/subtasks`,
+  GENERATE_SUBTASKS: (todoId) => `/api/v1/todos/${todoId}/generate`,
+  TRANSLATE_TODO: (todoId) => `/api/v1/todos/${todoId}/translate`,
+  TRANSLATE_TEXT: '/api/v1/todos/translate',
+  TOGGLE_TODO: (todoId) => `/api/v1/todos/${todoId}/toggle`,
+  UPDATE_SUBTASK: (subtaskId) => `/api/v1/subtasks/${subtaskId}`,
+  DELETE_SUBTASK: (subtaskId) => `/api/v1/subtasks/${subtaskId}`,
+  TODO_TRANSLATIONS: (todoId) => `/api/v1/todos/${todoId}/translations`,
 };
 
 export const HTTP_STATUS = {

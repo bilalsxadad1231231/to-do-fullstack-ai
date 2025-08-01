@@ -25,7 +25,7 @@ export const subtaskApi = {
 
   // Delete subtask
   deleteSubtask: async (subtaskId) => {
-    await httpClient.delete(`/subtasks/${subtaskId}`);
+    await httpClient.delete(API_ENDPOINTS.DELETE_SUBTASK(subtaskId));
     return true;
   },
 }; 

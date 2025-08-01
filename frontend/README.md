@@ -52,7 +52,7 @@ A modern React frontend for the AI-powered Todo application with smart task mana
    
    Edit `.env.local` and update the API URL:
    ```env
-   REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
+   REACT_APP_API_BASE_URL=https://muhammadbilal10101-todo-ai.hf.space
    ```
 
 4. **Start the development server**

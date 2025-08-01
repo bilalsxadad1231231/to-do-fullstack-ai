@@ -22,7 +22,7 @@ export const translationApi = {
 
   // Get todo translations
   getTodoTranslations: async (todoId) => {
-    const response = await httpClient.get(`${API_ENDPOINTS.TODOS}/${todoId}/translations`);
+    const response = await httpClient.get(API_ENDPOINTS.TODO_TRANSLATIONS(todoId));
     return response.data;
   },
 }; 
