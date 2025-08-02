@@ -8,6 +8,7 @@ from ....services.todo_service import TodoService
 router = APIRouter()
 
 @router.get("/", response_model=List[TodoWithRelations])
+@router.get("", response_model=List[TodoWithRelations])
 def get_todos(
     skip: int = 0,
     limit: int = 100,
@@ -30,6 +31,7 @@ def get_todo(todo_id: int, db: Session = Depends(get_db)):
     return todo
 
 @router.post("/", response_model=TodoWithRelations, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=TodoWithRelations, status_code=status.HTTP_201_CREATED)
 def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
     """Create a new todo"""
     todo_service = TodoService(db)
@@ -63,6 +65,7 @@ def delete_todo(todo_id: int, db: Session = Depends(get_db)):
         )
 
 @router.patch("/{todo_id}/toggle", response_model=TodoWithRelations)
+@router.patch("/{todo_id}/toggle/", response_model=TodoWithRelations)
 def toggle_todo_completion(todo_id: int, db: Session = Depends(get_db)):
     """Toggle todo completion status"""
     todo_service = TodoService(db)

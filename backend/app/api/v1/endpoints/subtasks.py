@@ -8,6 +8,7 @@ from ....services.todo_service import TodoService
 router = APIRouter()
 
 @router.post("/todos/{todo_id}/generate", response_model=List[Subtask])
+@router.post("/todos/{todo_id}/generate/", response_model=List[Subtask])
 async def generate_subtasks(
     todo_id: int,
     request: SubtaskGenerateRequest,
@@ -34,6 +35,7 @@ async def generate_subtasks(
         )
 
 @router.get("/todos/{todo_id}/subtasks", response_model=List[Subtask])
+@router.get("/todos/{todo_id}/subtasks/", response_model=List[Subtask])
 def get_todo_subtasks(todo_id: int, db: Session = Depends(get_db)):
     """Get all subtasks for a todo"""
     todo_service = TodoService(db)

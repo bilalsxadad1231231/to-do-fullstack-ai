@@ -147,7 +147,7 @@ SECRET_KEY=your_secret_key
 
 ### Frontend Environment Variables
 ```env
-REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
+REACT_APP_API_BASE_URL=https://muhammadbilal10101-todo-ai.hf.space
 ```
 
 ## 📚 API Documentation
@@ -204,12 +204,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Tailwind CSS](https://tailwindcss.com/) for the styling framework
 - [Groq](https://groq.com/) for AI/LLM services
 
+## 📚 Documentation
+
+This project includes comprehensive documentation:
+
+- **[Product Requirements Document (PRD)](./PRD.md)** - Detailed feature specifications and requirements
+- **[User Documentation](./USER_DOCUMENTATION.md)** - Complete user guide with step-by-step instructions
+- **[Technical Assessment](./assessment.md)** - Assessment submission with implementation details
+
+## 🚀 Live Demo
+
+- **Frontend Application**: https://to-do-fullstack-front.vercel.app/
+- **GitHub Repository**: https://github.com/bilalsxadad1231231/todo-ai-app-assessment
+- **Video Walkthrough**: https://drive.google.com/file/d/16csbhCtP4eUkp7p4TtNPdgwgePaStHBn/view?usp=sharing
+
 ## 📞 Support
 
 For support and questions:
+- **Developer**: Muhammad Bilal
+- **Email**: bilal.ai.developer@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/muhammad-bilal-866750280
+- **GitHub**: https://github.com/bilalsxadad1231231
 - Create an issue on GitHub
 - Check the individual README files in backend/ and frontend/
 - Review the API documentation when running locally
+
+## 🎯 Assessment Details
+
+This project was completed as part of a technical assessment with the following specifications:
+- **Development Time**: 4 hours (both frontend and backend)
+- **AI Tools Used**: Claude AI for architectural decisions, Cursor as pair programmer
+- **Key Features**: Todo management, AI-powered subtask generation, multi-language translation
+- **Deployment**: Vercel for frontend, Hugging Face Spaces for backend
 
 ---
 

@@ -8,6 +8,7 @@ from ....services.todo_service import TodoService
 router = APIRouter()
 
 @router.post("/{todo_id}/translate", response_model=Translation)
+@router.post("/{todo_id}/translate/", response_model=Translation)
 async def translate_todo(
     todo_id: int,
     request: TodoTranslationRequest,
@@ -34,6 +35,7 @@ async def translate_todo(
         )
 
 @router.get("/{todo_id}/translations", response_model=List[Translation])
+@router.get("/{todo_id}/translations/", response_model=List[Translation])
 def get_todo_translations(todo_id: int, db: Session = Depends(get_db)):
     """Get all translations for a todo"""
     todo_service = TodoService(db)
@@ -46,6 +48,7 @@ def get_todo_translations(todo_id: int, db: Session = Depends(get_db)):
     return todo_service.get_todo_translations(todo_id)
 
 @router.post("/translate", response_model=dict)
+@router.post("/translate/", response_model=dict)
 async def translate_text(request: TranslationRequest):
     """Translate any text to target language"""
     from ....services.translation_service import translation_service
